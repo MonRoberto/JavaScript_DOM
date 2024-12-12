@@ -57,13 +57,13 @@ console.log(nuevoEnlace);
 // }
 
 // Seleccionar elementos y asociarles un evento
-const btnEnviar = document.querySelector('.boton--primario');
-btnEnviar.addEventListener('click', function(evento) {
-    console.log(evento);
-    evento.preventDefault();
-    console.log('enviando formulario');
-});
-
+// const btnEnviar = document.querySelector('.boton--primario');
+// btnEnviar.addEventListener('click', function(evento) {
+//     console.log(evento);
+//     evento.preventDefault();
+//     // Validar formulario
+//     console.log('enviando formulario');
+// });
 
 // Eventos de los Inputs y Textarea
 const datos = {
@@ -75,10 +75,21 @@ const datos = {
 const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
+const formulario = document.querySelector('.formulario');
 
 nombre.addEventListener('input', leerTexto)
 email.addEventListener('input', leerTexto)
 mensaje.addEventListener('input', leerTexto)
+// El evento de Submit
+
+formulario.addEventListener('submit', function(evento) {
+    evento.preventDefault();
+
+    // Validar el formulario
+    
+
+    // Enviar el formulario
+})
 
 function leerTexto(e) {
     // console.log(e.target.value)
@@ -88,3 +99,4 @@ function leerTexto(e) {
 
     console.log(datos);
 }
+
